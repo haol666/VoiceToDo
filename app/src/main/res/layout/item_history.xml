@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 摘要文本 -->
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="摘要内容"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="完成项目报告和发送邮件给客户" />
+
+        <!-- 待办事项数量 -->
+        <TextView
+            android:id="@+id/tvTodoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3 项待办"
+            android:textSize="14sp"
+            android:textColor="@color/primary_color"
+            android:drawableStart="@android:drawable/ic_menu_agenda"
+            android:drawablePadding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSummary"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="3 项待办" />
+
+        <!-- 时间戳 -->
+        <TextView
+            android:id="@+id/tvTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2024-01-01 12:00"
+            android:textSize="12sp"
+            android:textColor="@color/gray"
+            android:drawableStart="@android:drawable/ic_menu_recent_history"
+            android:drawablePadding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSummary"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="2024-01-01 12:00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VoiceToDo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorPrimaryVariant">@color/my_light_primary_variant</item>
+        <item name="colorOnPrimary">@color/my_light_on_primary</item>
+        <item name="colorSecondary">@color/my_light_secondary</item>
+        <item name="colorSecondaryVariant">@color/my_light_secondary_variant</item>
+        <item name="colorOnSecondary">@color/my_light_on_secondary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.VoiceToDo" parent="Base.Theme.VoiceToDo" />
+</resources>

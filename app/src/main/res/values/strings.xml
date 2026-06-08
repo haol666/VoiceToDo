@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VoiceToDo</string>
+    <string name="record_button">开始录音</string>
+    <string name="stop_button">停止录音</string>
+    <string name="processing">处理中...</string>
+    <string name="no_permission">需要录音权限</string>
+    <string name="empty_list">暂无待办事项</string>
+    <string name="add_todo">添加待办</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="hint_todo_content">请输入待办内容</string>
+    <string name="hint_todo_title">请输入标题</string>
+    <string name="model_downloading">正在下载模型...</string>
+    <string name="model_download_failed">模型下载失败</string>
+    <string name="model_download_success">模型下载成功</string>
+    <string name="listening">正在聆听...</string>
+    <string name="processing_voice">正在处理语音...</string>
+    
+    <!-- 历史记录相关 -->
+    <string name="history">历史记录</string>
+    <string name="no_history">暂无历史记录</string>
+    <string name="record_detail">记录详情</string>
+    <string name="original_text">原始文本</string>
+    <string name="summary">摘要</string>
+    <string name="todos">待办事项</string>
+    <string name="time">时间</string>
+    
+    <!-- 模型管理相关 -->
+    <string name="model_management">模型管理</string>
+    <string name="model_description">选择并下载适合您设备的大语言模型</string>
+    <string name="download_model">下载模型</string>
+    <string name="switch_model">切换到此模型</string>
+    <string name="delete_model">删除</string>
+    <string name="current_model">当前使用</string>
+    <string name="model_size">大小</string>
+    <string name="memory_requirement">内存要求</string>
+    <string name="confirm_download">确定要下载 %s 吗？\n大小：%s\n内存要求：%s</string>
+    <string name="download_complete">下载完成</string>
+    <string name="switch_question">模型已下载完成，是否切换到 %s？</string>
+    <string name="switch_later">稍后</string>
+    <string name="model_downloaded">模型下载成功</string>
+    <string name="model_switched">已切换到 %s</string>
+    <string name="model_deleted">模型已删除</string>
+    <string name="model_not_exist">模型文件不存在，请先下载</string>
+    <string name="switch_failed">切换失败</string>
+    <string name="need_storage_permission">需要存储权限才能下载模型</string>
+    <string name="confirm_delete">确定要删除 %s 吗？</string>
+</resources>

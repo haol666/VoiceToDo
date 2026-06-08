@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 模型名称 -->
+        <TextView
+            android:id="@+id/tvModelName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gemma 3 4B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvCurrent"
+            tools:text="Gemma 3 4B" />
+
+        <!-- 当前模型标签 -->
+        <TextView
+            android:id="@+id/tvCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="当前使用"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_current_model"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/tvModelName"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible" />
+
+        <!-- 模型描述 -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Google Gemma 3 4B 模型，适合日常任务"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@id/tvModelName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Google Gemma 3 4B 模型，适合日常任务" />
+
+        <!-- 模型大小 -->
+        <TextView
+            android:id="@+id/tvSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="大小：4.8 GB"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:drawablePadding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="大小：4.8 GB" />
+
+        <!-- 内存要求 -->
+        <TextView
+            android:id="@+id/tvMemory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:text="内存要求：6 GB RAM"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:drawableStart="@android:drawable/ic_menu_compass"
+            android:drawablePadding="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
+            app:layout_constraintStart_toEndOf="@id/tvSize"
+            tools:text="内存要求：6 GB RAM" />
+
+        <!-- 下载进度条 -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:max="100"
+            android:progress="0"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvProgress"
+            tools:visibility="visible"
+            tools:progress="50" />
+
+        <!-- 进度文本 -->
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:text="50%"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tvSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="50%"
+            tools:visibility="visible" />
+
+        <!-- 下载按钮 -->
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="下载模型"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primary_color"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnSwitch"
+            tools:visibility="visible" />
+
+        <!-- 切换按钮 -->
+        <Button
+            android:id="@+id/btnSwitch"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:text="切换到此模型"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/green"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintStart_toEndOf="@id/btnDownload"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            tools:visibility="visible" />
+
+        <!-- 删除按钮 -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:text="删除"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/red"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintStart_toEndOf="@id/btnSwitch"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
